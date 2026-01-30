@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+
+:root {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fff5f8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

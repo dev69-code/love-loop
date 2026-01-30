@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Love Loop — A Tiny Story</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div id="petalsContainer"></div> <!-- Background Petals -->
+    <div class="card" role="application" aria-label="Love Loop: 4 stage story">
+
+      <div class="left" aria-hidden="false">
+        <div class="logo">
+          <div class="dot">LL</div>
+          <div>
+            <div style="font-family:'Playfair Display', serif; font-weight:700; color:#fff; font-size:18px;">Love Loop
+            </div>
+            <div class="subtitle">Our Forever Story</div>
+          </div>
+        </div>
+
+        <div class="stage" id="stage">
+          <!-- Page 1 -->
+          <section id="page1" class="page visible" role="region" aria-labelledby="p1-title">
+            <div>
+              <div class="meta">24 Sept 2021 • First Sight ✨</div>
+              <h1 id="p1-title">The Moment I Saw You</h1>
+              <p>I was waiting for my sister when my eyes found you. At first, you felt familiar, like a distant memory,
+                but then I was lost. My gaze followed you all the way to your seat, mesmerized by a beauty I hadn't
+                known I was waiting for.</p>
+              <div class="cta">
+                <button class="btn" data-next="2">Start Journey →</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Page 2 -->
+          <section id="page2" class="page hidden" role="region" aria-labelledby="p2-title">
+            <div>
+              <div class="meta">October 2021 • The Heartbreak 💔</div>
+              <h1 id="p2-title">Shadows on My Heart</h1>
+              <p>I was ready to share my feelings, floating on hope, until I saw you with him. My sister confirmed what
+                I feared—he was the one. Heartbroken, I whispered to the universe, "Why does this always happen to me?"
+              </p>
+              <div class="cta">
+                <button class="btn" data-next="3">Continue →</button>
+                <button class="btn ghost" data-prev="1">Back</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Page 3 -->
+          <section id="page3" class="page hidden" role="region" aria-labelledby="p3-title">
+            <div>
+              <div class="meta">3 Dec 2021 • The Turning Point 🌟</div>
+              <h1 id="p3-title">A Spark in the Dark</h1>
+              <p>A message from an unknown ID changed everything. Realizing it was you made my hands shake and my heart
+                race like never before. You were free, and suddenly, 1 AM wasn't late enough for our conversations.</p>
+              <div class="cta">
+                <button class="btn" data-next="4">Continue →</button>
+                <button class="btn ghost" data-prev="2">Back</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Page 4 -->
+          <section id="page4" class="page hidden" role="region" aria-labelledby="p4-title">
+            <div>
+              <div class="meta">December 2021 • Sweet Suspense 🕰️</div>
+              <h1 id="p4-title">Waiting for You</h1>
+              <p>We met on the 6th, butterflies fluttering wild. You held a secret for New Year's Eve, keeping me in a
+                trance of curiosity. I'd wait hours just to see you for a few minutes, and every second was worth a
+                lifetime.</p>
+              <div class="cta">
+                <button class="btn" data-next="5">Continue →</button>
+                <button class="btn ghost" data-prev="3">Back</button>
+              </div>
+            </div>
+          </section>
+          <!-- Page 5 -->
+          <section id="page5" class="page hidden" role="region" aria-labelledby="p5-title">
+            <div>
+              <div class="meta">1 Jan 2022 • The Best Mistake ❤️</div>
+              <h1 id="p5-title">The Midnight Confession</h1>
+              <p>I waited all month for midnight, only to fall asleep! Waking up at 1 AM in a panic, I apologized, but
+                you silenced my fears. "Listen," you said, "I love you." My world stopped, then truly began.</p>
+              <div class="cta">
+                <button class="btn" data-next="6">Continue →</button>
+                <button class="btn ghost" data-prev="4">Back</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Page 6 -->
+          <section id="page6" class="page hidden" role="region" aria-labelledby="p6-title">
+            <div>
+              <div class="meta">The Story Continues...</div>
+              <h1 id="p6-title">Chapter 6</h1>
+              <p>Waiting for the next part of your beautiful story...</p>
+              <div class="cta">
+                <button class="btn" data-next="7">Next →</button>
+                <button class="btn ghost" data-prev="5">Back</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- More pages structure kept pending full story -->
+
+        </div>
+
+      </div>
+
+      <!-- right side visual area -->
+      <div class="right" aria-hidden="true">
+        <div class="visual">
+          <div class="heart-large" id="mainHeart" aria-hidden="true">
+            <!-- Heart SVG -->
+            <svg class="heart-svg pulse" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 21s-7-4.35-9.2-7.07C.8 11.63 3.1 6.5 7.5 6.5c2.17 0 3.48 1.1 4.5 2.28C12.02 7.6 13.33 6.5 15.5 6.5 19.9 6.5 22.2 11.63 21.2 13.93 19 16.65 12 21 12 21z" />
+            </svg>
+          </div>
+
+          <div class="hearts" id="heartsLayer" aria-hidden="true"></div>
+          <div id="photoContainer">
+            <img id="sidePhoto" src="" alt="Love Memory">
+          </div>
+        </div>
+
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
