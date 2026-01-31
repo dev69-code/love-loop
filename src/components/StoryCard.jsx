@@ -37,19 +37,21 @@ export const StoryCard = ({ page, totalPages, onNext, onPrev, onStartMusic, isMu
                                 {page.date}
                             </div>
 
-                            <h1 className="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
-                                {page.title}
-                            </h1>
+                            <div className={`transition-all duration-700 ${page.id === 1 && !isMusicStarted ? 'blur-sm select-none pointer-events-none' : ''}`}>
+                                <h1 className="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                                    {page.title}
+                                </h1>
 
-                            <p className="font-quicksand text-lg text-gray-600 leading-relaxed mb-10 max-w-md">
-                                {page.text}
-                            </p>
+                                <p className="font-quicksand text-lg text-gray-600 leading-relaxed mb-10 max-w-md">
+                                    {page.text}
+                                </p>
+                            </div>
 
                             <div className="flex items-center gap-4">
                                 {page.id === 1 && !isMusicStarted ? (
                                     <button
                                         onClick={onStartMusic}
-                                        className="group px-8 py-4 bg-gradient-to-r from-accent-pink to-rose-400 text-white rounded-full font-bold shadow-lg shadow-rose-300/30 hover:shadow-rose-400/50 hover:-translate-y-1 transition-all flex items-center gap-2"
+                                        className="group px-8 py-4 bg-gradient-to-r from-accent-pink to-rose-400 text-white rounded-full font-bold shadow-lg shadow-rose-300/30 hover:shadow-rose-400/50 hover:-translate-y-1 transition-all flex items-center gap-2 z-50"
                                     >
                                         Start Journey 🎵
                                     </button>
@@ -98,7 +100,7 @@ export const StoryCard = ({ page, totalPages, onNext, onPrev, onStartMusic, isMu
                         <img
                             src={page.image}
                             alt={page.title}
-                            className="w-full h-full object-contain rounded-sm"
+                            className={`w-full h-full object-contain rounded-sm transition-all duration-1000 ${page.id === 1 && !isMusicStarted ? 'opacity-0 blur-md grayscale' : 'opacity-100 blur-0 grayscale-0'}`}
                             onError={(e) => {
                                 e.target.src = "https://images.unsplash.com/photo-1518568814500-bf5f8ca12f56?q=80&w=1000&auto=format&fit=crop" // Fallback
                             }}
