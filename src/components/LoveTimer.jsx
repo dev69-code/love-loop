@@ -5,8 +5,8 @@ export const LoveTimer = () => {
     const [time, setTime] = useState({ years: 0, days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
-        // Start Date: Dec 24, 2021 (Based on story slide 9: "1 year anniversary... Dec 24")
-        const startDate = new Date('2021-12-24T00:00:00');
+        // Start Date: Dec 3, 2021
+        const startDate = new Date('2021-12-03T00:00:00');
 
         const interval = setInterval(() => {
             const now = new Date();
